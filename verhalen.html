@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>99 verhalen</title>
 </head>
+
 <body>
-    
+    <section>
+        <h1>99 verhalen</h1>
+        <form action="">
+            <input type="search" placeholder="Search.." name="storySearch">
+            <input type="image" name="storySubmit" src="">
+        </form>
+
+        <h2>Categorie</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="nsfwFilter">
+                <label for="nsfwFilter"><img src="" alt=""></label>
+            </li>
+            <li>
+                <input type="checkbox" id="bookmarkFilter">
+                <label for="bookmarkFilter"><img src="" alt=""></label>
+            </li>
+            <li>
+                <input type="checkbox" id="verdrietFilter">
+                <label for="verdrietFilter">Verdriet (12)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="vrolijkFilter">
+                <label for="vrolijkFilter">Vrolijk (8)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tegenslagFilter">
+                <label for="tegenslagFilter">Tegenslag (10)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="SuccesFilter">
+                <label for="SuccesFilter">Succes (14)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="InpsiratieFilter">
+                <label for="InpsiratieFilter">Inspiratie (4)</label>
+            </li>
+            <li>
+                <input type="checkbox" id="woedeFilter">
+                <label for="woedeFilter">woede (7)</label>
+            </li>
+        </ul>
+
+        <div>
+            <h2>lengte</h2>
+            <input type="range" id="storyLength" list="tickmarks" min="0" max="100" step="25">
+            <datalist id="tickmarks">
+                <option value="0">
+                <option value="25">
+                <option value="50">
+                <option value="75">
+                <option value="100">
+            </datalist>
+        </div>
+    </section>
+
+    <main>
+        <h1>Uitgelicht</h1>
+
+        <figure>
+            <img src="" alt="preview van het verhaal ongeluk">
+
+            <div>
+                <img src="" alt="timeIcon">
+                4 minuten
+            </div>
+            <div>
+                <img src="" alt="bookmarkIcon">
+            </div>
+
+            <figcaption>
+                <b>Ongeluk</b> <br>
+                Molovich
+            </figcaption>
+        </figure>
+    </main>
 </body>
+
 </html>
