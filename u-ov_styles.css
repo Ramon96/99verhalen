@@ -25,6 +25,8 @@ input[type=checkbox]{
     box-shadow:0 8px 18px 0 rgba(103,92,83,.3);
     border-radius: 25px;
     position: fixed;
+    width: 26%;
+    min-width: 329px;
 }
 
 #filterMenu h1{
@@ -47,6 +49,7 @@ input[type=checkbox]{
    border: none;
    color: #8d857e;
    outline: none;
+   width: 80%;
 }
 
 
@@ -82,6 +85,9 @@ input[type=checkbox]{
 #filterCategory h2{
     padding-top: 20px;
 }
+#storyLength{
+    width: 100%;
+}
 
 .middleMain{
     background-color: white;
@@ -93,7 +99,12 @@ input[type=checkbox]{
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-    
+    min-width: 583px;
+    width: 55%;
+}
+
+.middleOffset{
+    margin-left: 35vh;
 }
 
 #storyContainer{
@@ -106,7 +117,6 @@ input[type=checkbox]{
     border-radius: 20px;
     background-color: #f7f4f1;
     /* padding: 20px; */
-    width: 15em;
     text-align: left;
     box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
@@ -130,6 +140,11 @@ input[type=checkbox]{
 }
 .timeLabel img{
     vertical-align: top;
+}
+
+#bookmarkIcon{
+    position: relative;
+    left: 30%;
 }
 
 .bookmarkLabel{
