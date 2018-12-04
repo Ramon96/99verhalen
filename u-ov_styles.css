@@ -6,20 +6,30 @@ html,body {
     margin: 0;
 }
 
-input[type=checkbox]{
-    border-color:red;
-    background: #e7772b
+#search{
+    border: none;
 }
 
-#searchBar{
+#search legend{
+    color: #e7772b;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+}
+
+#searchbar{
     display: flex;
+    /* todo: change color and thickness to #e7772b with javascript when the search input is focused. */
+    border: solid #8d857e;
+    border-width: 0 0 1.4px 0;
+    padding-bottom:5px;
 }
 
-#searchBar input[type="image"]{
+#searchbar input[type="image"]{
     align-self: center;
 }
 
-#filterMenu{
+#menu{
     display: inline-block;
     background-color: #fff;
     box-shadow:0 8px 18px 0 rgba(103,92,83,.3);
@@ -29,21 +39,14 @@ input[type=checkbox]{
     min-width: 329px;
 }
 
-#filterMenu h1{
-    color: #e7772b;
-    font-size: 1.2em;
-}
 
-#filterSearch{
+#searchForm{
     padding: 10px 10px 0 10px;
     margin: 10px 10px 0 10px;
-    border: solid #8d857e;
-    /* todo: change color and thickness to #e7772b with javascript when the search input is focused. */
-    border-width: 0 0 1.4px 0;
     padding: 20px 0 5px;
 }
 
-#filterSearch input[type=search]{
+#searchForm input[type=search]{
    font-size: 1em;
    font-weight: 300;
    border: none;
@@ -53,17 +56,17 @@ input[type=checkbox]{
 }
 
 
-#filterSearch input[type=search]::-webkit-search-cancel-button{
+#searchForm input[type=search]::-webkit-search-cancel-button{
     -webkit-appearance: none;
 }
 
-#filterCategory {
+#category {
     background-color: #f7f4f1;
     padding: 0 20px 20px 20px;
     border-radius: 0 0 20px 20px;
 }
 
-#filterCategory ul{
+#category ul{
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -72,7 +75,7 @@ input[type=checkbox]{
     min-width: 0;   /* NEW; needed for Firefox */
 }
 
-#filterCategory ul li{
+#category ul li{
  list-style: none;
  border: solid #f2f1f1 2px;
  border-radius: 15px;
@@ -82,8 +85,15 @@ input[type=checkbox]{
  margin-bottom: 5px;
 }
 
-#filterCategory h2{
+#category fieldset{
+    border: 0px;
+}
+
+#category legend{
     padding-top: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: left;
 }
 #storyLength{
     width: 100%;

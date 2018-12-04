@@ -10,66 +10,72 @@
 </head>
 
 <body>
-    <aside id="filterMenu">
-
-        <form id="filterSearch" action="">
-            <h1>99 verhalen</h1>
-            <div id="searchBar">
-                <input type="search" placeholder="Verhaal zoeken" name="storySearch">
-                <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
-                <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen">
-            </div>
+    <aside id="menu"> 
+        <form id="searchForm" action="">
+            <fieldset id="search">
+                <legend>99 verhalen</legend>
+                <div id="searchbar">
+                    <!-- Dit is is een div vanwege een flexbox bug! -->
+                    <input type="search" placeholder="Verhaal zoeken" name="storySearch">
+                    <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
+                    <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen">
+                </div>
+            </fieldset>
         </form>
-        <div id="filterCategory">
-            <h2>Categorie</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" id="nsfwFilter">
-                    <label for="nsfwFilter">18+</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="bookmarkFilter">
-                    <label for="bookmarkFilter"><img  id="bookmarkIcon" src="img/icons/bookmark.png" alt="filter op opgeslagen verhalen"></label>
-                </li>
-                <li>
-                    <input type="checkbox" id="verdrietFilter">
-                    <label for="verdrietFilter">Verdriet (12)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="vrolijkFilter">
-                    <label for="vrolijkFilter">Vrolijk (8)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="tegenslagFilter">
-                    <label for="tegenslagFilter">Tegenslag (10)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="SuccesFilter">
-                    <label for="SuccesFilter">Succes (14)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="InpsiratieFilter">
-                    <label for="InpsiratieFilter">Inspiratie (4)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="woedeFilter">
-                    <label for="woedeFilter">woede (7)</label>
-                </li>
-            </ul>
 
-
-            <h2>Lengte</h2>
-            <input type="range" id="storyLength" list="tickmarks" min="0" max="100" step="25">
-            <datalist id="tickmarks">
-                <option value="0">
-                <option value="25">
-                <option value="50">
-                <option value="75">
-                <option value="100">
-            </datalist>
-        </div>
+        <form id="category" action="">
+            <fieldset>
+                <legend>Categorie</legend>
+                <ul>
+                        <li>
+                            <input type="checkbox" id="nsfwFilter">
+                            <label for="nsfwFilter">18+</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="bookmarkFilter">
+                            <label for="bookmarkFilter"><img id="bookmarkIcon" src="img/icons/bookmark.png" alt="filter op opgeslagen verhalen"></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="verdrietFilter">
+                            <label for="verdrietFilter">Verdriet (12)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="vrolijkFilter">
+                            <label for="vrolijkFilter">Vrolijk (8)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tegenslagFilter">
+                            <label for="tegenslagFilter">Tegenslag (10)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="SuccesFilter">
+                            <label for="SuccesFilter">Succes (14)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="InpsiratieFilter">
+                            <label for="InpsiratieFilter">Inspiratie (4)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="woedeFilter">
+                            <label for="woedeFilter">woede (7)</label>
+                        </li>
+                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Lengte</legend>
+                <input type="range" id="storyLength" list="tickmarks" min="0" max="100" step="25">
+                <datalist id="tickmarks">
+                    <option value="0">
+                    <option value="25">
+                    <option value="50">
+                    <option value="75">
+                    <option value="100">
+                </datalist>
+            </fieldset>
+        </form>
     </aside>
     <div class="middleOffset">
+        <!-- Deze main content word naar het midden gedrukt en de middleOffset div zorgt voor een offset vanuit het midden -->
         <main class="middleMain">
             <h1>Uitgelicht</h1>
             <div id="storyContainer">
