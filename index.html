@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <aside id="menu">
-        <form id="searchForm" action="">
-            <fieldset id="search">
+    <aside>
+        <form id="search" action="">
+            <fieldset>
                 <legend>99 verhalen</legend>
-                <div id="searchbar">
+                <div>
                     <!-- Dit is is een div vanwege een flexbox bug! -->
                     <input type="search" placeholder="Verhaal zoeken" name="storySearch">
+                    <!-- Dit is mijn submit button https://stackoverflow.com/questions/3381609/button-image-as-form-input-submit-button -->
                     <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
-                    <button id="cleartext"></button>
+                    <button alt="maak het zoek veld leeg."></button>
                     <!-- <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen"> -->
                 </div>
             </fieldset>
@@ -29,12 +30,13 @@
                 <legend>Categorie</legend>
                 <ul>
                     <li>
+                        <!-- id's zijn voor de labels; -->
                         <input type="checkbox" id="nsfwFilter">
                         <label for="nsfwFilter">18+</label>
                     </li>
                     <li>
                         <input type="checkbox" id="bookmarkFilter">
-                        <label for="bookmarkFilter"><img id="bookmarkIcon" src="img/icons/bookmark.png" alt="filter op opgeslagen verhalen"></label>
+                        <label for="bookmarkFilter"><img src="img/icons/bookmark.png" alt="filter op opgeslagen verhalen"></label>
                     </li>
                     <li>
                         <input type="checkbox" id="verdrietFilter">
@@ -64,8 +66,9 @@
             </fieldset>
             <fieldset>
                 <legend>Lengte</legend>
-                <input type="range" id="storyLength" list="tickmarks" min="0" max="100" step="25">
+                <input type="range" list="tickmarks" min="0" max="100" step="25">
                 <datalist id="tickmarks">
+                    <!-- de id tickmarks verwijst naar de input ;) -->
                     <option value="0">
                     <option value="25">
                     <option value="50">
@@ -73,64 +76,65 @@
                     <option value="100">
                 </datalist>
             </fieldset>
+            <input type="submit" alt="Zoek met de gekozen filters" value="Zoek naar verhalen">
         </form>
     </aside>
     <div class="mainOffset">
         <!-- Deze main content word naar het midden gedrukt en de middleOffset div zorgt voor een offset vanuit het midden -->
         <main>
             <h1>Uitgelicht</h1>
-            <figure class="story">
-                    <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                    <div class="timeLabel">
-                        <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
-                        <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                        4 minuten
-                    </div>
-                    <button class="bookmarkLabel"><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <figcaption>
+            <article>
+                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                <div>
+                    <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
+                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
+                    4 minuten
+                </div>
+                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
+                <p>
                     <b>Ongeluk</b> <br>
                     Molovich
-                </figcaption>
-            </figure>
+                </p>
+            </article>
 
-            <figure class="story">
-                    <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                    <div class="timeLabel">
-                        <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                        4 minuten
-                    </div>
-                    <button class="bookmarkLabel"><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <figcaption>
+            <article>
+                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                <div>
+                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
+                    4 minuten
+                </div>
+                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
+                <p>
                     <b>Ongeluk</b> <br>
                     Molovich
-                </figcaption>
-            </figure>
+                </p>
+            </article>
 
-            <figure class="story">
-                    <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                    <div class="timeLabel">
-                        <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                        4 minuten
-                    </div>
-                    <button class="bookmarkLabel"><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <figcaption>
+            <article>
+                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                <div>
+                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
+                    4 minuten
+                </div>
+                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
+                <p>
                     <b>Ongeluk</b> <br>
                     Molovich
-                </figcaption>
-            </figure>
+                </p>
+            </article>
 
-            <figure class="story">
-                    <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                    <div class="timeLabel">
-                        <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                        4 minuten
-                    </div>
-                    <button class="bookmarkLabel"><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <figcaption>
+            <article>
+                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                <div>
+                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
+                    4 minuten
+                </div>
+                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
+                <p>
                     <b>Ongeluk</b> <br>
                     Molovich
-                </figcaption>
-            </figure>
+                </p>
+            </article>
         </main>
     </div>
 </body>
