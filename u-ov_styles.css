@@ -6,6 +6,21 @@ body {
     background-color: #fcd900;
     margin: 0;
     font-size: 62.5%;
+
+
+}
+
+header{
+    height: 50px; 
+    /* als ik 50 deel door 16 krijg ik 3.125em, maar dit is niet dezelfde voormaat als 50px. ik weet dat de body fontsize er iets mee te maken kan hebben?*/
+    background-color: #675c53;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Filteraside */
@@ -49,11 +64,12 @@ aside {
     background-color: #fff;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     border-radius: 25px;
-    max-width: 364px;
+    width: 364px;
     /* ik vind het niet mooi als dit kan schalen, daarom kies ik in deze situatie voor px */
     font-size: 1.6rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5%;
 }
 
 
@@ -135,14 +151,13 @@ input[type="submit"] {
 
 /* einde filteraside */
 
-/* Main content */
-main {
+/* section content */
+section {
     background-color: white;
     padding: 2%;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
-    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -153,11 +168,11 @@ main {
     font-size: 1.6rem;
 }
 
-main h1 {
+section h1 {
     grid-column: span 2;
 }
 
-main article {
+section article {
     border-radius: 20px;
     background-color: #f7f4f1;
     text-align: left;
@@ -172,7 +187,7 @@ main article {
 
 
 
-main div {
+section div {
     position: absolute;
     top: 4%;
     left: 5%;
@@ -181,13 +196,13 @@ main div {
     border-radius: 8px;
 }
 
-main div img {
+section div img {
     vertical-align: top;
 }
 
 
 
-main article button {
+section article button {
     position: absolute;
     top: 4%;
     right: 5%;
@@ -199,7 +214,7 @@ main article button {
     border: none;
 }
 
-main article button img {
+section article button img {
     vertical-align: top;
 }
 
@@ -214,26 +229,26 @@ article p {
     margin-bottom: 5%;
 }
 
-/* end main content */
+/* end section content */
 
 
 /* desktop media query */
 @media (min-width: 768px) {
-    aside {
-        display: inline-block;
-        position: fixed;
-        margin-left: 0;
-        margin-right: 0;
-        /* groter dan dit vind ik niet mooi */
-        max-width: 364px;
+    main{
+        flex-direction: initial;
     }
 
-    main {
+    aside {
+        display: inline-block;
+        align-self: flex-start;
+    }
+
+    section {
         min-width: 583px;
         width: 55%;
     }
 
-    .mainOffset {
+    .sectionOffset {
         margin-left: 35vh;
     }
 
