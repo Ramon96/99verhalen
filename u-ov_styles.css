@@ -10,15 +10,15 @@ body {
 
 }
 
-header{
-    height: 50px; 
+header {
+    height: 50px;
     /* als ik 50 deel door 16 krijg ik 3.125em, maar dit is niet dezelfde voormaat als 50px. ik weet dat de body fontsize er iets mee te maken kan hebben?*/
     background-color: #675c53;
     width: 100%;
     margin-bottom: 3%;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
 }
@@ -92,6 +92,7 @@ input[type=search]::-webkit-search-cancel-button {
     -webkit-appearance: none;
 }
 
+
 #category {
     background-color: #f7f4f1;
     padding: 0 2% 2% 2%;
@@ -108,16 +109,60 @@ input[type=search]::-webkit-search-cancel-button {
 
 #category ul li {
     list-style: none;
-    border: solid #f2f1f1 2px;
+    border: 1px solid #f1f1f1;
     border-radius: 10px;
     padding: 4%;
     overflow: hidden;
-    font-weight: bold;
+    font-weight: 500;
+    position: relative;
+}
+
+.tickbox {
+    padding-left: 5%;
+}
+
+.tickbox:before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 3%;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 2px solid #8d857e;
+    -webkit-transition: border-color .2s ease-in;
+    -o-transition: border-color .2s ease-in;
+    transition: border-color .2s ease-in;
+}
+
+input[type=checkbox]:checked+.tickbox:before {
+    border: 2px solid #e7772b;
+}
+
+input[type=checkbox]+.tickbox:after {
+    content: url("img/icons/checkmark.png");
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    /* het gaat helemaal mis met de formaten... zonder een scale word de afbeelding niet zichtbaar. */
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+}
+
+input[type=checkbox]:checked+.tickbox:after {
+    transform: scale(.025);
+
 }
 
 #category img {
     position: relative;
-    left: 30%;
+    left: 25%;
 }
 
 #category fieldset {
@@ -219,7 +264,7 @@ section article button img {
 }
 
 article {
-     margin-block-start: 1em;
+    margin-block-start: 1em;
     margin-block-end: 1em;
 
 }
@@ -233,9 +278,9 @@ article p {
 
 
 /* desktop media query */
-@media (min-width: 768px) {
-    main{
-        flex-direction: initial;
+@media (min-width: 60rem) {
+    main {
+        flex-direction: row-reverse;
     }
 
     aside {
@@ -252,9 +297,9 @@ article p {
         margin-left: 35vh;
     }
 
-    article{
+    article {
         margin-inline-start: 1.5em;
-        margin-inline-end: 1.5em;  
+        margin-inline-end: 1.5em;
     }
 
 }

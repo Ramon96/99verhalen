@@ -14,75 +14,67 @@
 
     </header>
     <main>
-    <aside>
-        <form id="search" action="">
-            <fieldset>
-                <legend>99 verhalen</legend>
-                <div>
-                    <!-- Dit is is een div vanwege een flexbox bug! -->
-                    <input type="search" placeholder="Verhaal zoeken" name="storySearch">
-                    <!-- Dit is mijn submit button https://stackoverflow.com/questions/3381609/button-image-as-form-input-submit-button -->
-                    <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
-                    <button alt="maak het zoek veld leeg."></button>
-                    <!-- <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen"> -->
-                </div>
-            </fieldset>
-        </form>
+        <aside>
+            <form id="search" action="">
+                <fieldset>
+                    <legend>99 verhalen</legend>
+                    <div>
+                        <!-- Dit is is een div vanwege een flexbox bug! -->
+                        <input type="search" placeholder="Verhaal zoeken" name="storySearch">
+                        <!-- Dit is mijn submit button https://stackoverflow.com/questions/3381609/button-image-as-form-input-submit-button -->
+                        <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
+                        <button alt="maak het zoek veld leeg."></button>
+                        <!-- <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen"> -->
+                    </div>
+                </fieldset>
+            </form>
 
-        <form id="category" action="">
-            <fieldset>
-                <legend>Categorie</legend>
-                <ul>
-                    <li>
-                        <!-- id's zijn voor de labels; -->
-                        <input type="checkbox" id="nsfwFilter">
-                        <label for="nsfwFilter">18+</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="bookmarkFilter">
-                        <label for="bookmarkFilter"><img src="img/icons/bookmark.png" alt="filter op opgeslagen verhalen"></label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="verdrietFilter">
-                        <label for="verdrietFilter">Verdriet (12)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="vrolijkFilter">
-                        <label for="vrolijkFilter">Vrolijk (8)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tegenslagFilter">
-                        <label for="tegenslagFilter">Tegenslag (10)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="SuccesFilter">
-                        <label for="SuccesFilter">Succes (14)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="InpsiratieFilter">
-                        <label for="InpsiratieFilter">Inspiratie (4)</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="woedeFilter">
-                        <label for="woedeFilter">woede (7)</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>Lengte</legend>
-                <input type="range" list="tickmarks" min="0" max="100" step="25">
-                <datalist id="tickmarks">
-                    <!-- de id tickmarks verwijst naar de input ;) -->
-                    <option value="0">
-                    <option value="25">
-                    <option value="50">
-                    <option value="75">
-                    <option value="100">
-                </datalist>
-            </fieldset>
-            <input type="submit" alt="Zoek met de gekozen filters" value="Zoek naar verhalen">
-        </form>
-    </aside>
+            <form id="category" action="">
+                <fieldset>
+                    <legend>Categorie</legend>
+                    <ul>
+                        <li>
+                            <!-- id's zijn voor de labels; -->
+                            <input type="checkbox" id="verdrietFilter">
+                            <label class="tickbox" for="verdrietFilter">Verdriet (12)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="vrolijkFilter">
+                            <label class="tickbox" for="vrolijkFilter">Vrolijk (8)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tegenslagFilter">
+                            <label class="tickbox" for="tegenslagFilter">Tegenslag (10)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="SuccesFilter">
+                            <label class="tickbox" for="SuccesFilter">Succes (14)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="InpsiratieFilter">
+                            <label class="tickbox" for="InpsiratieFilter">Inspiratie (4)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="woedeFilter">
+                            <label class="tickbox" for="woedeFilter">woede (7)</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Lengte</legend>
+                    <input type="range" list="tickmarks" min="0" max="100" step="25">
+                    <datalist id="tickmarks">
+                        <!-- de id tickmarks verwijst naar de input ;) -->
+                        <option value="0">
+                        <option value="25">
+                        <option value="50">
+                        <option value="75">
+                        <option value="100">
+                    </datalist>
+                </fieldset>
+                <input type="submit" alt="Zoek met de gekozen filters" value="Zoek naar verhalen">
+            </form>
+        </aside>
         <section>
             <h1>Uitgelicht</h1>
             <article>
