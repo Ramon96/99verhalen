@@ -5,22 +5,93 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #fcd900;
     margin: 0;
-    font-size: 62.5%;
+    font-size: 1em;
 
+}
 
+h1{
+    width: 100%;
+    text-align: center;
 }
 
 header {
-    height: 50px;
-    /* als ik 50 deel door 16 krijg ik 3.125em, maar dit is niet dezelfde voormaat als 50px. ik weet dat de body fontsize er iets mee te maken kan hebben?*/
+    height: 3.125em;
     background-color: #675c53;
     width: 100%;
     margin-bottom: 3%;
+    position: relative;
+}
+
+header nav{
+    display: none;
+}
+
+header img#logo{
+    width: 5em;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header button img{
+    width: 1em;
+}
+
+header button{
+    position: absolute;
+    margin-left: 10%;
+    color:white;
+    background: none;
+    border: none;
+    top:50%;
+    transform: translate(0, -50%);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 3%;
+}
+
+main nav{
+    width: 100%;
+    position: fixed;
+    height: 3.125em;
+    background-color: #675c53;
+    bottom: 0;
+    z-index: 1;
+}
+
+main nav img{
+    width: 1.3em;
+    display: block;
+    margin: 0 auto;
+
+}
+
+main nav ul{
+    display: flex;
+    height: 3.125em;
+
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+
+
+}
+
+main nav li{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+
+    padding-bottom: 4em;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 /* Filteraside */
@@ -31,7 +102,7 @@ main {
 
 #search legend {
     color: #e7772b;
-    font-size: 2.4rem;
+    font-size: 1.2em;
     font-weight: bold;
     text-align: left;
 }
@@ -42,7 +113,6 @@ main {
     border: solid #8d857e;
     border-width: 0 0 1.4px 0;
     padding-bottom: 2%;
-    font-size: 1.6rem
 }
 
 #search div input[type="image"] {
@@ -59,17 +129,39 @@ main {
     background-color: white;
 }
 
+
+
+#overlay{
+    position: fixed;
+    /* De rede dat ik voor opacity kies is omdat display event listeners afkapt
+    en ik hier een animatie op heb staan */
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(103, 92, 83, .3);
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity .1s;
+
+}  
+
 aside {
-    display: block;
+    /* display: block; */
+    position: absolute;
     background-color: #fff;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     border-radius: 25px;
-    width: 364px;
-    /* ik vind het niet mooi als dit kan schalen, daarom kies ik in deze situatie voor px */
-    font-size: 1.6rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
+    min-width: 22.75em;
+    font-size: 1em;
+    top: 50%;
+    transform: translate(-100%,-50%);
+    transition: transform .9s;
+    transition-timing-function: ease;
+    z-index: 2;
 }
 
 
@@ -79,7 +171,7 @@ aside {
 }
 
 input[type=search] {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 300;
     border: none;
     color: #8d857e;
@@ -136,27 +228,33 @@ input[type=search]::-webkit-search-cancel-button {
     transition: border-color .2s ease-in;
 }
 
+
+
 input[type=checkbox]:checked+.tickbox:before {
     border: 2px solid #e7772b;
 }
 
+label:hover {
+    cursor: pointer;
+}
+
 input[type=checkbox]+.tickbox:after {
-    content: url("img/icons/checkmark.png");
-    width: 20px;
-    height: 20px;
+    content: url("img/icons/checkmark.svg");
+    width: 15px;
+    height: 15px;
     transform: scale(0);
     /* het gaat helemaal mis met de formaten... zonder een scale word de afbeelding niet zichtbaar. */
     -webkit-transition: .2s ease-in;
     -o-transition: .2s ease-in;
     transition: .2s ease-in;
-    top: 0;
-    left: 0;
+    top: 9px;
+    left: 9px;
     position: absolute;
 
 }
 
 input[type=checkbox]:checked+.tickbox:after {
-    transform: scale(.025);
+    transform: scale(1);
 
 }
 
@@ -180,6 +278,14 @@ input[type="range"] {
     width: 100%;
 }
 
+input[type="range"]:hover {
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
 input[type="submit"] {
     margin-left: auto;
     margin-right: auto;
@@ -187,7 +293,7 @@ input[type="submit"] {
     background-color: #d6cec6;
     border: 0;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1rem;
     color: #fff;
     padding: 9px 15px;
     border-radius: 10px;
@@ -199,21 +305,23 @@ input[type="submit"] {
 /* section content */
 section {
     background-color: white;
-    padding: 2%;
+    padding: 5%;
+    padding-top:0;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    max-width: 35em;
+    width:75%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 4%;
+    grid-column-gap: 8%;
     margin-block-end: 1em;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
-section h1 {
+section h2 {
     grid-column: span 2;
 }
 
@@ -226,26 +334,44 @@ section article {
 }
 
 .thumbnail {
-    max-width: 100%;
+    width: 100%;
+    height: 7em;
+    object-fit: cover;
+    object-position: center;
     border-radius: 15px 15px 0 0;
 }
 
 
 
-section div {
+section div.leestijd {
     position: absolute;
     top: 4%;
     left: 5%;
     background-color: #fff;
     padding: 2%;
     border-radius: 8px;
+    font-size: .8em;
+
 }
 
-section div img {
+section div.leestijd img {
     vertical-align: top;
 }
 
+section div.like{
+    position: absolute;
+    bottom: 60%;
+    right: 5%;
+    background-color: #fff;
+    padding: 2%;
+    border-radius: 8px;
+    font-size: .8em;
+}
 
+section div.like img{
+    vertical-align: top;
+    width: 1.125em;
+}
 
 section article button {
     position: absolute;
@@ -259,8 +385,25 @@ section article button {
     border: none;
 }
 
-section article button img {
+section article  img {
+    width: 1.25em;
     vertical-align: top;
+}
+
+section article button svg{
+    width: 1.25em;
+}
+.cls-1{
+    transition: .8s;
+    fill: none;
+    stroke: #231f20;
+    fill-opacity: 0;
+}
+
+.bookmarked .cls-1{
+    fill: #e7772b;
+    stroke: transparent;
+    fill-opacity: 1;
 }
 
 article {
@@ -270,31 +413,104 @@ article {
 }
 
 article p {
-    margin-left: 5%;
-    margin-bottom: 5%;
+    font-size: 1rem;
+    line-height: 1.375em;
+    margin-left: 8%;
+    margin-right: 8%;
+
+    margin-bottom: 8%;
+}
+
+article a{
+    color: #2887c8;
+    font-size: .8em;
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 6%;
 }
 
 /* end section content */
 
 
 /* desktop media query */
-@media (min-width: 60rem) {
+@media (min-width: 60em) {
     main {
-        flex-direction: row-reverse;
+        display: flex;
+    }
+
+    main nav{
+        display: none;
+    }
+
+    header nav{
+        width: 37%;
+        height: 3.125em;
+        background-color: #675c53;
+        bottom: 0;
+        margin-left: auto;
+        z-index: 1;
+        display: block;
+    }
+    
+    header nav img{
+        width: 1.3em;
+        margin: 0 auto;
+        vertical-align: bottom;
+        padding-right: 10%;
+    
+    }
+    
+    header nav ul{
+        display: flex;
+        height: 3.125em;
+        list-style: none;
+        padding: 0; 
+        margin: 0;
+        text-align: center;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    header nav li{
+        flex: 1;
+    }
+
+    header button{
+        display: none;
+    }
+
+    header nav a{
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    header img#logo{
+        left: 12%;
     }
 
     aside {
         display: inline-block;
+        top: initial;
+        transform: initial;
+        position: initial;
+        pointer-events: initial;
+        justify-self: center;
+        margin-left: auto;
+        margin-right: 2%;
         align-self: flex-start;
+        transition: none;
+    }
+
+    #overlay{
+        display: none; 
+
     }
 
     section {
-        min-width: 583px;
+        max-width: 31.43em;
         width: 55%;
-    }
-
-    .sectionOffset {
-        margin-left: 35vh;
+        margin-left: 2%;
     }
 
     article {

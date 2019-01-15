@@ -11,126 +11,263 @@
 
 <body>
     <header>
-
+        <button id="filter">
+            <img src="img/icons/filter.svg" alt="Filtereren op verhalen">
+            <span>Filter</span>
+        </button>
+        <img id="logo" alt="Het U-ov Logo" src="img/icons/logo.svg">
+        <nav>
+                <ul>
+                    <li><a href="#"><img src="img/icons/gelezen.svg" alt="Gelezen">Gelezen</a></li>                  
+                    <li><a href="#"><img src="img/icons/favoriet.svg" alt="Bookmarks">Mijn favorieten</a></li>
+                    <li><a href="#"><img src="img/icons/login.svg" alt="Login">Login</a></li>
+                </ul>
+            </nav>
     </header>
+    <h1>99 verhalen</h1>
     <main>
-        <aside>
-            <form id="search" action="">
-                <fieldset>
-                    <legend>99 verhalen</legend>
-                    <div>
-                        <!-- Dit is is een div vanwege een flexbox bug! -->
-                        <input type="search" placeholder="Verhaal zoeken" name="storySearch">
-                        <!-- Dit is mijn submit button https://stackoverflow.com/questions/3381609/button-image-as-form-input-submit-button -->
-                        <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
-                        <button alt="maak het zoek veld leeg."></button>
-                        <!-- <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen"> -->
-                    </div>
-                </fieldset>
-            </form>
+        <!-- ookal is dit visueel onderin, heb ik dit bovenin de html geplaatst zodat screen readers
+        niet eerst door de hele pagina moeten scimmen voordat ze bij het menu komen. -->
+        <nav>
+            <ul>
+                <li><a href="#"><img src="img/icons/login.svg" alt="Login"></a></li>
+                <li><a href="#"><img src="img/icons/favoriet.svg" alt="Bookmarks"></a></li>
+                <li><a href="#"><img src="img/icons/gelezen.svg" alt="Gelezen"></a></li>
+            </ul>
+        </nav>
+        <!-- Deze div word gebruikt om een overlay te maken, dit is alleen voor de visualiteit -->
+        <div id="overlay">
+        </div>
 
-            <form id="category" action="">
-                <fieldset>
-                    <legend>Categorie</legend>
-                    <ul>
-                        <li>
-                            <!-- id's zijn voor de labels; -->
-                            <input type="checkbox" id="verdrietFilter">
-                            <label class="tickbox" for="verdrietFilter">Verdriet (12)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="vrolijkFilter">
-                            <label class="tickbox" for="vrolijkFilter">Vrolijk (8)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="tegenslagFilter">
-                            <label class="tickbox" for="tegenslagFilter">Tegenslag (10)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="SuccesFilter">
-                            <label class="tickbox" for="SuccesFilter">Succes (14)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="InpsiratieFilter">
-                            <label class="tickbox" for="InpsiratieFilter">Inspiratie (4)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="woedeFilter">
-                            <label class="tickbox" for="woedeFilter">woede (7)</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Lengte</legend>
-                    <input type="range" list="tickmarks" min="0" max="100" step="25">
-                    <datalist id="tickmarks">
-                        <!-- de id tickmarks verwijst naar de input ;) -->
-                        <option value="0">
-                        <option value="25">
-                        <option value="50">
-                        <option value="75">
-                        <option value="100">
-                    </datalist>
-                </fieldset>
-                <input type="submit" alt="Zoek met de gekozen filters" value="Zoek naar verhalen">
-            </form>
-        </aside>
+            <aside>
+                <form id="search" action="">
+                    <fieldset>
+                        <legend>99 verhalen</legend>
+                        <div>
+                            <!-- Dit is is een div vanwege een flexbox bug! -->
+                            <input type="search" placeholder="Verhaal zoeken" name="storySearch">
+                            <!-- Dit is mijn submit button https://stackoverflow.com/questions/3381609/button-image-as-form-input-submit-button -->
+                            <input type="image" name="storySubmit" alt="bevestig zoeken" src="img/icons/Search.png">
+                            <button alt="maak het zoek veld leeg."></button>
+                            <!-- <img src="img/icons/removeTXT.png" alt="gebruik deze knop om de zoek tekst weg te halen"> -->
+                        </div>
+                    </fieldset>
+                </form>
+
+                <form id="category" action="">
+                    <fieldset>
+                        <legend>Categorie</legend>
+                        <ul>
+                            <li>
+                                <!-- id's zijn voor de labels; -->
+                                <input type="checkbox" id="verdrietFilter">
+                                <label class="tickbox" for="verdrietFilter">Verdriet (12)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="vrolijkFilter">
+                                <label class="tickbox" for="vrolijkFilter">Vrolijk (8)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tegenslagFilter">
+                                <label class="tickbox" for="tegenslagFilter">Tegenslag (10)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="SuccesFilter">
+                                <label class="tickbox" for="SuccesFilter">Succes (14)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="InpsiratieFilter">
+                                <label class="tickbox" for="InpsiratieFilter">Inspiratie (4)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="woedeFilter">
+                                <label class="tickbox" for="woedeFilter">woede (7)</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Lengte</legend>
+                        <input type="range" list="tickmarks" min="0" max="100" step="25">
+                        <datalist id="tickmarks">
+                            <!-- de id tickmarks verwijst naar de input ;) -->
+                            <option value="0">
+                            <option value="25">
+                            <option value="50">
+                            <option value="75">
+                            <option value="100">
+                        </datalist>
+                    </fieldset>
+                    <input type="submit" alt="Zoek met de gekozen filters" value="Zoek naar verhalen">
+                </form>
+            </aside>
         <section>
-            <h1>Uitgelicht</h1>
+            <h2>Uitgelicht</h2>
             <article>
                 <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                <div>
+                <div class="leestijd">
                     <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
-                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                    4 minuten
+                    <img src="img/icons/eta.svg" alt="Geschatte leestijd: ">
+                    4 min
                 </div>
-                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
+                <button class="bookmarkButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.28">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #231f20;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.6px;
+                                }
+                            </style>
+                        </defs>
+                        <title>bookmark</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1" d="M6.57.45,8.09,3.52a1,1,0,0,0,.77.56l3.24.47a.35.35,0,0,1,.19.59L9.87,7.5a.85.85,0,0,0-.24.73l.58,3.39a.31.31,0,0,1-.45.33l-3.43-1.8L3,11.89a.37.37,0,0,1-.54-.39L3,8.17a.71.71,0,0,0-.21-.63L.41,5.18a.38.38,0,0,1,.21-.64l3-.43a1.39,1.39,0,0,0,1.05-.76L6.09.45A.27.27,0,0,1,6.57.45Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <div class="like">
+                    <img src="img/icons/like.svg" alt="De hoeveelheid like's van dit verhaal zijn: ">
+                    14
+                </div>
                 <p>
-                    <b>Ongeluk</b> <br>
-                    Molovich
+                    <b>Ongeluk Molovich</b> <br>
+                    Voor het Centraal
+                    Station stap ik lijn 13 uit
+                    midden in een plas die
+                    zo diep is...
                 </p>
+                <a href="#">Lees meer</a>
             </article>
 
             <article>
-                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                <div>
-                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                    4 minuten
-                </div>
-                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <p>
-                    <b>Ongeluk</b> <br>
-                    Molovich
-                </p>
-            </article>
+                    <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                    <div class="leestijd">
+                        <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
+                        <img src="img/icons/eta.svg" alt="Geschatte leestijd: ">
+                        4 min
+                    </div>
+                    <button class="bookmarkButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.28">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                        stroke: #231f20;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 0.6px;
+                                    }
+                                </style>
+                            </defs>
+                            <title>bookmark</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M6.57.45,8.09,3.52a1,1,0,0,0,.77.56l3.24.47a.35.35,0,0,1,.19.59L9.87,7.5a.85.85,0,0,0-.24.73l.58,3.39a.31.31,0,0,1-.45.33l-3.43-1.8L3,11.89a.37.37,0,0,1-.54-.39L3,8.17a.71.71,0,0,0-.21-.63L.41,5.18a.38.38,0,0,1,.21-.64l3-.43a1.39,1.39,0,0,0,1.05-.76L6.09.45A.27.27,0,0,1,6.57.45Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="like">
+                        <img src="img/icons/like.svg" alt="De hoeveelheid like's van dit verhaal zijn: ">
+                        14
+                    </div>
+                    <p>
+                        <b>Ongeluk Molovich</b> <br>
+                        Voor het Centraal
+                        Station stap ik lijn 13 uit
+                        midden in een plas die
+                        zo diep is...
+                    </p>
+                    <a href="#">Lees meer</a>
+                </article>
 
-            <article>
-                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                <div>
-                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                    4 minuten
-                </div>
-                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <p>
-                    <b>Ongeluk</b> <br>
-                    Molovich
-                </p>
-            </article>
+                <article>
+                        <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                        <div class="leestijd">
+                            <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
+                            <img src="img/icons/eta.svg" alt="Geschatte leestijd: ">
+                            4 min
+                        </div>
+                        <button class="bookmarkButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.28">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: none;
+                                            stroke: #231f20;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 0.6px;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>bookmark</title>
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <g id="Layer_1-2" data-name="Layer 1">
+                                        <path class="cls-1" d="M6.57.45,8.09,3.52a1,1,0,0,0,.77.56l3.24.47a.35.35,0,0,1,.19.59L9.87,7.5a.85.85,0,0,0-.24.73l.58,3.39a.31.31,0,0,1-.45.33l-3.43-1.8L3,11.89a.37.37,0,0,1-.54-.39L3,8.17a.71.71,0,0,0-.21-.63L.41,5.18a.38.38,0,0,1,.21-.64l3-.43a1.39,1.39,0,0,0,1.05-.76L6.09.45A.27.27,0,0,1,6.57.45Z" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="like">
+                            <img src="img/icons/like.svg" alt="De hoeveelheid like's van dit verhaal zijn: ">
+                            14
+                        </div>
+                        <p>
+                            <b>Ongeluk Molovich</b> <br>
+                            Voor het Centraal
+                            Station stap ik lijn 13 uit
+                            midden in een plas die
+                            zo diep is...
+                        </p>
+                        <a href="#">Lees meer</a>
+                    </article>
 
-            <article>
-                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
-                <div>
-                    <img src="img/icons/time.png" alt="Geschatte leestijd: ">
-                    4 minuten
-                </div>
-                <button><img src="img/icons/bookmark.png" alt="bookmarkIcon"></button>
-                <p>
-                    <b>Ongeluk</b> <br>
-                    Molovich
-                </p>
-            </article>
+                    <article>
+                            <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                            <div class="leestijd">
+                                <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
+                                <img src="img/icons/eta.svg" alt="Geschatte leestijd: ">
+                                4 min
+                            </div>
+                            <button class="bookmarkButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.28">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: none;
+                                                stroke: #231f20;
+                                                stroke-miterlimit: 10;
+                                                stroke-width: 0.6px;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>bookmark</title>
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <g id="Layer_1-2" data-name="Layer 1">
+                                            <path class="cls-1" d="M6.57.45,8.09,3.52a1,1,0,0,0,.77.56l3.24.47a.35.35,0,0,1,.19.59L9.87,7.5a.85.85,0,0,0-.24.73l.58,3.39a.31.31,0,0,1-.45.33l-3.43-1.8L3,11.89a.37.37,0,0,1-.54-.39L3,8.17a.71.71,0,0,0-.21-.63L.41,5.18a.38.38,0,0,1,.21-.64l3-.43a1.39,1.39,0,0,0,1.05-.76L6.09.45A.27.27,0,0,1,6.57.45Z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="like">
+                                <img src="img/icons/like.svg" alt="De hoeveelheid like's van dit verhaal zijn: ">
+                                14
+                            </div>
+                            <p>
+                                <b>Ongeluk Molovich</b> <br>
+                                Voor het Centraal
+                                Station stap ik lijn 13 uit
+                                midden in een plas die
+                                zo diep is...
+                            </p>
+                            <a href="#">Lees meer</a>
+                        </article>
         </section>
     </main>
+    <script src="u-ov_script.js"></script>
 </body>
 
 </html>
