@@ -432,6 +432,16 @@ article a{
 /* end section content */
 
 
+@media (max-width: 30em)
+{
+    section{
+        grid-template-columns: 1fr;
+    }
+
+    section h2{
+        grid-column: initial;
+    }
+}
 /* desktop media query */
 @media (min-width: 60em) {
     main {
