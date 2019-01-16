@@ -129,7 +129,25 @@ button:hover{
     background-color: white;
 }
 
+input[type=text]{
+    font-size: .8em;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px #8d857e solid;
+    color: #8d857e;
+    outline: none;
+    width: 80%;
+}
 
+input[type=password]{
+    font-size: .8em;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px #8d857e solid;
+    color: #8d857e;
+    outline: none;
+    width: 80%;
+}
 
 #overlay{
     position: fixed;
@@ -393,6 +411,22 @@ section article  img {
 section article button svg{
     width: 1.25em;
 }
+
+#login section{
+    /* grid-template-columns: initial; */
+}
+
+#login section h2{
+    /* grid-column: 1; */
+}
+
+#login section svg{
+    width: 1em;
+    vertical-align: bottom;
+}
+
+
+
 .cls-1{
     transition: .8s;
     fill: none;
@@ -404,6 +438,13 @@ section article button svg{
     fill: #e7772b;
     stroke: transparent;
     fill-opacity: 1;
+}
+
+#login .cls-1{
+    transition: initial;
+    stroke: initial;
+    fill: #8d857e;
+    fill-opacity: initial;
 }
 
 article {
