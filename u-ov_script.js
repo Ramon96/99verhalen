@@ -5,6 +5,10 @@ var bookmarkMicro = document.getElementsByClassName("micro");
 var verhaalMicro = document.getElementById("verhaalMicro");
 var microStep = 0;
 var ratingButtons = document.getElementsByClassName("rating");
+var verhaalParagraaf = document.querySelectorAll("p");
+
+
+
 
 for (var i = 0; i < bookmarkButton.length; i++) {
     bookmarkButton[i].addEventListener("click", bookmark);
@@ -14,6 +18,15 @@ window.onscroll = function (e) {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         document.getElementById("review").style.opacity = "1";
     }
+
+    // if(inScherm(document.getElementsByTagName("p")[0]));
+    // {
+    //     console.log("yup");
+    // }
+    // else{
+    //     console.log("no");
+
+    // }
 }
 
 
@@ -35,6 +48,42 @@ if (document.getElementById("loadingbar") !== null) {
     document.getElementById("loadingbar").addEventListener("animationend", showContent);
 }
 
+
+var depressText = function () {
+    // dit is gemaakt met een guide
+   // source https:eddyerburgh.me/animate-elements-scrolled-view-vanilla-js
+ var element;
+ var windowHeight;
+
+ function init(){
+     element = verhaalParagraaf;
+     windowHeight = window.innerHeight;
+     eventListener();
+     inScherm();
+ }
+
+ function eventListener() {
+    window.addEventListener('scroll', inScherm);
+    window.addEventListener('resize', init);
+  }
+
+  function inScherm(){
+    for (var i = 0; i < element.length; i++) {
+        var positionFromTop = element[i].getBoundingClientRect().top;
+        if (positionFromTop - windowHeight <= 0) {
+            element[i].className = element[i].className.replace(
+            'recht',
+            'depression'
+          );
+        }
+      }
+  }
+  return{
+      init: init
+  };
+}
+
+depressText().init();
 
 function responsiveCheck() {
     if (window.innerWidth >= 960) {
@@ -98,6 +147,7 @@ function showContent() {
 }
 
 
+
 // if (document.getElementById("verhaalMicro") !== null) {
 //     document.getElementById("verhaalMicro").addEventListener("click", rateVerhaal);
 // }
@@ -142,6 +192,7 @@ function rateVerhaal() {
             }
             document.getElementById("like").classList.remove("groen");
             document.getElementById("dislike").classList.remove("rood");
+            document.getElementById("aanbevolen").style.display = "none";
             break;
         case 1:
             for (var i = 0; i < ratingButtons.length; i++) {
@@ -149,6 +200,8 @@ function rateVerhaal() {
             }
             document.getElementById("like").classList.remove("groen");
             document.getElementById("dislike").classList.remove("rood");
+            document.getElementById("aanbevolen").style.display = "none";
+
             break;
         case 2:
             document.getElementById("like").classList.add("groen");
@@ -158,6 +211,7 @@ function rateVerhaal() {
         case 3:
             document.getElementById("dislike").classList.add("rood");
             document.getElementById("like").classList.remove("groen");
+            
             break;
         default:
             // document.getElementById("like").classList.remove("groen");
