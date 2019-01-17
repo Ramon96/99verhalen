@@ -12,16 +12,13 @@
 
 <body id="login">
     <header>
-        <button id="filter">
-            <img src="img/icons/filter.svg" alt="Filtereren op verhalen">
-            <span>Filter</span>
-        </button>
+        <a href="index.html"><img src="img/icons/back.svg" alt="Ga terug naar het overzichts pagina"></a>
         <img id="logo" alt="Het U-ov Logo" src="img/icons/logo.svg">
         <nav>
             <ul>
-                <li><a href="#"><img src="img/icons/gelezen.svg" alt="Gelezen">Gelezen</a></li>
-                <li><a href="#"><img src="img/icons/favoriet.svg" alt="Bookmarks">Mijn favorieten</a></li>
-                <li><a href="#"><img src="img/icons/login.svg" alt="Login">Login</a></li>
+                <li><a href="gelezen.html"><img src="img/icons/gelezen.svg" alt="Gelezen">Gelezen</a></li>
+                <li><a href="bookmark.html"><img src="img/icons/favoriet.svg" alt="Bookmarks">Mijn favorieten</a></li>
+                <li><a href="login.html"><img src="img/icons/login.svg" alt="Login">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -31,23 +28,63 @@
         niet eerst door de hele pagina moeten scimmen voordat ze bij het menu komen. -->
         <nav>
             <ul>
-                <li><a href="#"><img src="img/icons/login.svg" alt="Login"></a></li>
-                <li><a href="#"><img src="img/icons/favoriet.svg" alt="Bookmarks"></a></li>
-                <li><a href="#"><img src="img/icons/gelezen.svg" alt="Gelezen"></a></li>
+                <li class="active"><a href="login.html"><img src="img/icons/login.svg" alt="Login"></a></li>
+                <li><a href="bookmark.html"><img src="img/icons/favoriet.svg" alt="Bookmarks"></a></li>
+                <li><a href="gelezen.html"><img src="img/icons/gelezen.svg" alt="Gelezen"></a></li>
             </ul>
         </nav>
 
         <section>
-            <h2>Login</h2>
+            <h2>Inloggen</h2>
             <form action="">
                 <fieldset>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 17.55"><defs><style>.cls-1{fill:#8d857e;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M4.47,9.17C2.31,5.63,2.88,2.45,4.75,1a5.42,5.42,0,0,1,6.46.14c2,1.74,2.08,4.61,0,8.16a8.41,8.41,0,0,0,1.12.75c2.19,1,2.95,3,3.37,5.15a2.09,2.09,0,0,1-2.07,2.32q-5.77.06-11.54,0A2.19,2.19,0,0,1,0,14.92c.33-2.18,1.14-4,3.35-5A5.92,5.92,0,0,0,4.47,9.17Zm3.4,6.74h3.8c2.47,0,2.75-.5,1.53-2.73A1.1,1.1,0,0,0,13,12.9C11.81,11.78,10.79,10.3,8.7,11a4,4,0,0,1-2.2-.19A1.41,1.41,0,0,0,4.93,11a3.23,3.23,0,0,1-.92.57,3.86,3.86,0,0,0-2.1,3.08C1.72,15.53,2,16,3,15.92,4.61,15.88,6.24,15.91,7.87,15.91ZM4.9,4.65A5.31,5.31,0,0,0,6.38,8.58c1,1.07,2.15,1.15,3.05-.05a9.54,9.54,0,0,0,1.45-3.19A2.69,2.69,0,0,0,9.79,2.28a3.41,3.41,0,0,0-3.41-.21A2.48,2.48,0,0,0,4.9,4.65Z"/></g></g></svg>
-<!-- <img src="img/icons/login.svg" alt="Login"> -->
-                    <input placeholder="E-mailadres" type="text" name="Email" id="">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 17.55"><defs><style>.cls-1{fill:#8d857e;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M4.47,9.17C2.31,5.63,2.88,2.45,4.75,1a5.42,5.42,0,0,1,6.46.14c2,1.74,2.08,4.61,0,8.16a8.41,8.41,0,0,0,1.12.75c2.19,1,2.95,3,3.37,5.15a2.09,2.09,0,0,1-2.07,2.32q-5.77.06-11.54,0A2.19,2.19,0,0,1,0,14.92c.33-2.18,1.14-4,3.35-5A5.92,5.92,0,0,0,4.47,9.17Zm3.4,6.74h3.8c2.47,0,2.75-.5,1.53-2.73A1.1,1.1,0,0,0,13,12.9C11.81,11.78,10.79,10.3,8.7,11a4,4,0,0,1-2.2-.19A1.41,1.41,0,0,0,4.93,11a3.23,3.23,0,0,1-.92.57,3.86,3.86,0,0,0-2.1,3.08C1.72,15.53,2,16,3,15.92,4.61,15.88,6.24,15.91,7.87,15.91ZM4.9,4.65A5.31,5.31,0,0,0,6.38,8.58c1,1.07,2.15,1.15,3.05-.05a9.54,9.54,0,0,0,1.45-3.19A2.69,2.69,0,0,0,9.79,2.28a3.41,3.41,0,0,0-3.41-.21A2.48,2.48,0,0,0,4.9,4.65Z"/></g></g></svg>
-                    <input placeholder="Wachtwoord" type="password" name="Wachtwoord" id="">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 17.55">
+                            <defs>
+                                <style>.cls-1{fill:#8d857e;}</style>
+                            </defs>
+                            <title>Asset 9</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M4.47,9.17C2.31,5.63,2.88,2.45,4.75,1a5.42,5.42,0,0,1,6.46.14c2,1.74,2.08,4.61,0,8.16a8.41,8.41,0,0,0,1.12.75c2.19,1,2.95,3,3.37,5.15a2.09,2.09,0,0,1-2.07,2.32q-5.77.06-11.54,0A2.19,2.19,0,0,1,0,14.92c.33-2.18,1.14-4,3.35-5A5.92,5.92,0,0,0,4.47,9.17Zm3.4,6.74h3.8c2.47,0,2.75-.5,1.53-2.73A1.1,1.1,0,0,0,13,12.9C11.81,11.78,10.79,10.3,8.7,11a4,4,0,0,1-2.2-.19A1.41,1.41,0,0,0,4.93,11a3.23,3.23,0,0,1-.92.57,3.86,3.86,0,0,0-2.1,3.08C1.72,15.53,2,16,3,15.92,4.61,15.88,6.24,15.91,7.87,15.91ZM4.9,4.65A5.31,5.31,0,0,0,6.38,8.58c1,1.07,2.15,1.15,3.05-.05a9.54,9.54,0,0,0,1.45-3.19A2.69,2.69,0,0,0,9.79,2.28a3.41,3.41,0,0,0-3.41-.21A2.48,2.48,0,0,0,4.9,4.65Z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <input placeholder="E-mailadres" type="text" name="Email">
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.22 14.71">
+                            <defs>
+                                <style>.cls-1{fill:#8d9092;}.cls-2{fill:#fff;}</style>
+                            </defs>
+                            <title>password</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M5.08,14.71H1.41A1.28,1.28,0,0,1,0,13.3V7.19A1.28,1.28,0,0,1,1.13,5.77c.17,0,.14-.11.14-.21,0-.73-.05-1.46,0-2.18a3.83,3.83,0,0,1,7.63.31C9,4.3,9,4.92,9,5.53c0,.15,0,.22.2.25A1.28,1.28,0,0,1,10.22,7.1v6.26a1.27,1.27,0,0,1-1.35,1.35Z" />
+                                    <path class="cls-2" d="M5.11,13.44H1.55c-.2,0-.29,0-.28-.27q0-2.92,0-5.85c0-.23.06-.28.28-.28H8.67c.21,0,.29,0,.28.28q0,2.92,0,5.85c0,.24-.07.27-.28.27Z" />
+                                    <path class="cls-2" d="M5.1,5.76c-.76,0-1.52,0-2.29,0-.22,0-.26-.07-.26-.28,0-.63,0-1.26,0-1.89A2.37,2.37,0,0,1,4.17,1.48a2.43,2.43,0,0,1,2.55.39,2.48,2.48,0,0,1,.94,2c0,.56,0,1.13,0,1.69,0,.17-.06.2-.22.2Z" />
+                                    <path class="cls-1" d="M5,8.33a1.32,1.32,0,0,1,1.34.82,1.26,1.26,0,0,1-.41,1.44.3.3,0,0,0-.15.3,4.85,4.85,0,0,1,0,.66.62.62,0,0,1-.64.6.65.65,0,0,1-.63-.6v-.2a1,1,0,0,0-.33-.95A1.11,1.11,0,0,1,4,9.05,1.17,1.17,0,0,1,5,8.33Z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <input placeholder="Wachtwoord" type="password" name="Wachtwoord" >
+                    </p>
                 </fieldset>
+                <input type="submit" alt="Log in met de gekozen gebruikers gegevens" value="Inloggen">
+                <a href="#">Wachtwoord vergeten?</a>
             </form>
+            <!-- https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
+            <section>
+                <h3>Nieuwe lezer?</h3>
+                <p>
+                    <!-- bewust geen alt text, ik wil niet dat de screen reader het icoontje voorleest. anders verlies
+                    ik het verkopende element van USP's -->
+                    <img src="img/icons/checkmark.svg">Elke dag leuke verhalen <br>
+                    <img src="img/icons/checkmark.svg">Verder lezen voor, tijdens en na de reis <br>
+                    <img src="img/icons/checkmark.svg">Lezen op iedere device</p>
+                <br>
+                <a href="#">Registreren</a>
+            </section>
         </section>
     </main>
     <script src="u-ov_script.js"></script>

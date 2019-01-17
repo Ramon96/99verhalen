@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="u-ov_styles.css">
+    <title>99 verhalen</title>
+</head>
+
+<body id="bookmark">
+    <header>
+            <a href="index.html"><img src="img/icons/back.svg" alt="Ga terug naar het overzichts pagina"></a>
+        <img id="logo" alt="Het U-ov Logo" src="img/icons/logo.svg">
+        <nav>
+                <ul>
+                    <li><a href="gelezen.html"><img src="img/icons/gelezen.svg" alt="Gelezen">Gelezen</a></li>                  
+                    <li><a href="bookmark.html"><img class="micro" src="img/icons/favoriet.svg" alt="Bookmarks">Mijn favorieten</a></li>
+                    <li><a href="login.html"><img src="img/icons/login.svg" alt="Login">Login</a></li>
+                </ul>
+            </nav>
+    </header>
+    <h1>99 verhalen</h1>
+    <main>
+        <!-- ookal is dit visueel onderin, heb ik dit bovenin de html geplaatst zodat screen readers
+        niet eerst door de hele pagina moeten scimmen voordat ze bij het menu komen. -->
+        <nav>
+            <ul>
+                <li><a href="login.html"><img src="img/icons/login.svg" alt="Login"></a></li>
+                <li class="active"><a href="bookmark.html"><img class="micro" src="img/icons/favoriet.svg" alt="Bookmarks"></a></li>
+                <li><a href="gelezen.html"><img src="img/icons/gelezen.svg" alt="Gelezen"></a></li>
+            </ul>
+        </nav>
+        <!-- Deze div word gebruikt om een overlay te maken, dit is alleen voor de visualiteit -->
+       
+        <section>
+            <h2>Bookmarks</h2>
+            <div id=loadingbar></div>
+            <article>
+                <img class="thumbnail" src="img/storyPreview/ongeluk.png" alt="preview van het verhaal ongeluk">
+                <div class="leestijd">
+                    <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
+                    <img src="img/icons/eta.svg" alt="Geschatte leestijd: ">
+                    4 min
+                </div>
+                <button class="bookmarkButton bookmarked">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.28">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #231f20;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.6px;
+                                }
+                            </style>
+                        </defs>
+                        <title>bookmark</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1" d="M6.57.45,8.09,3.52a1,1,0,0,0,.77.56l3.24.47a.35.35,0,0,1,.19.59L9.87,7.5a.85.85,0,0,0-.24.73l.58,3.39a.31.31,0,0,1-.45.33l-3.43-1.8L3,11.89a.37.37,0,0,1-.54-.39L3,8.17a.71.71,0,0,0-.21-.63L.41,5.18a.38.38,0,0,1,.21-.64l3-.43a1.39,1.39,0,0,0,1.05-.76L6.09.45A.27.27,0,0,1,6.57.45Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <div class="like">
+                        <img src="img/icons/like.svg" alt="De hoeveelheid like's van dit verhaal zijn: ">
+                        184
+                    </div>
+                <p>
+                    <b>Ongeluk Molovich</b> <br>
+                    Voor het Centraal
+                    Station stap ik lijn 13 uit
+                    midden in een plas die
+                    zo diep is...
+                </p>
+                <a href="#">Lees meer</a>
+            </article>
+
+            <article>
+                    <img class="thumbnail" src="img/storyPreview/verliefd.jpg" alt="preview van het verhaal ongeluk">
+                    <div class="leestijd">
+                        <!-- https://semantic-ui.com/elements/label.html zegt dat het semantisch kan met een div -->
+                        <img src="img/icons/eta.svg" alt="Geschatte leestijd: ">
+                        3 min
+                    </div>
+                    <button class="bookmarkButton bookmarked">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.7 12.28">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                        stroke: #231f20;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 0.6px;
+                                    }
+                                </style>
+                            </defs>
+                            <title>bookmark</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M6.57.45,8.09,3.52a1,1,0,0,0,.77.56l3.24.47a.35.35,0,0,1,.19.59L9.87,7.5a.85.85,0,0,0-.24.73l.58,3.39a.31.31,0,0,1-.45.33l-3.43-1.8L3,11.89a.37.37,0,0,1-.54-.39L3,8.17a.71.71,0,0,0-.21-.63L.41,5.18a.38.38,0,0,1,.21-.64l3-.43a1.39,1.39,0,0,0,1.05-.76L6.09.45A.27.27,0,0,1,6.57.45Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="like">
+                            <img src="img/icons/like.svg" alt="De hoeveelheid like's van dit verhaal zijn: ">
+                            137
+                        </div>
+                    <p>
+                        <b>Verliefd Molovich</b> <br>
+                        Licht van mijn leven. Ik stapte vandaag bus 21 uit. Het was op het midden van de dag...
+
+                    </p>
+                    <a href="#">Lees meer</a>
+                </article>
+
+
+        </section>
+    </main>
+    <script src="u-ov_script.js"></script>
+</body>
+
+</html>
