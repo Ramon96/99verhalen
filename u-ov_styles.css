@@ -449,6 +449,7 @@ section article button svg {
 #login section svg {
     width: 1em;
     vertical-align: bottom;
+    display: inline;
 }
 
 #login section fieldset {
