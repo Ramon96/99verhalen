@@ -504,9 +504,7 @@ stroke-miterlimit: 10;
 }
 
 input[type=text] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    background-clip: padding-box;
     font-size: .8em;
     font-weight: 300;
     border: none;
@@ -518,9 +516,7 @@ input[type=text] {
 }
 
 input[type=password] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    background-clip: padding-box;
     font-size: .8em;
     font-weight: 300;
     border: none;
