@@ -63,6 +63,11 @@ header button {
     padding: 3%;
 }
 
+
+input {
+    -webkit-appearance: none;
+}
+
 main nav {
     width: 100%;
     position: fixed;
