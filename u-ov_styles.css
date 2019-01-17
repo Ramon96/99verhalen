@@ -251,7 +251,7 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .tickbox {
-    padding-left: 5%;
+    padding-left: 15%;
 }
 
 .tickbox:before {
