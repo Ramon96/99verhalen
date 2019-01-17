@@ -597,7 +597,7 @@ input[type=password] {
     padding: 2.5%;
     transition: .4s;
     opacity: 0;
-    max-width: 60%;
+    max-width: 80%;
 }
 
 #verhaal .groen .duim{
@@ -630,7 +630,7 @@ input[type=password] {
     display: inline;
 }
 #verhaal section section svg{
-    width: 3.4em;
+    width: 2.4em;
     margin: 2%;
     display: inline;
 }
