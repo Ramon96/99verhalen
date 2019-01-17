@@ -574,6 +574,7 @@ input[type=password] {
 #verhaal section{
     margin-left: auto;
     display: block;
+    padding: 0;
     width: 95%;
     padding-top: 1%;
     background-image: url("img/mainStory/background.svg");
@@ -581,7 +582,6 @@ input[type=password] {
     background-position-x: center;
     color: white;
     font-family: 'itsdripping', Roboto;
-    padding: 0;
     padding-bottom: 1%;
 
 }
