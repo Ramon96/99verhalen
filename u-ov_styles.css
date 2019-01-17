@@ -246,11 +246,12 @@ input[type=search]::-webkit-search-cancel-button {
     overflow: hidden;
     font-weight: 500;
     position: relative;
+    white-space: nowrap;
+
 }
 
 .tickbox {
     padding-left: 5%;
-    white-space: nowrap;
 }
 
 .tickbox:before {
