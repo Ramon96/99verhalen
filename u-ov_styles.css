@@ -512,7 +512,7 @@ input[type=text] {
     color: #8d857e;
     outline: none;
     max-width: 19.8em;
-    width: 90%;
+    width: 88%;
 }
 
 input[type=password] {
@@ -524,7 +524,7 @@ input[type=password] {
     color: #8d857e;
     outline: none;
     max-width: 20em;
-    width: 90%;
+    width: 88%;
 }
 
 #login input[type=submit] {
